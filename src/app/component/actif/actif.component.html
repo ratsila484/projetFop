@@ -1,0 +1,118 @@
+<app-side-bar></app-side-bar>
+<!--<div class="content-wrapper">
+    <div class=" container-fluid mainMessage">
+        <div class="row" style="padding: 0;">
+            @if(!isSmallScreen || !isHide){
+            <div class="col-sm-5 actifBloc">
+                <div class="container-fluid">
+                    <div class="row actif">
+                        @for (item of listDiscussion; track $index) {
+                        @if($index<=5){ <app-list-actif class="col-sm-2" [nom]="listDiscussion[$index].destinataire"
+                            [lien_pdp]="listDiscussion[$index].lienPdp"
+                            (clickMessageActif)="onMessagereceived(listDiscussion[$index].destinataire)">
+                            </app-list-actif>
+                            }
+                            }
+                    </div>
+                    <hr>
+
+                    <div class="row messageBlocI">
+                        <div class="container-fluid">
+                            <div class="row searchBloc">
+                                <div class="input-group mb-3">
+                                    <div class="input-group-prepend">
+                                        <span class="input-group-text"><fa-icon [icon]="search"></fa-icon></span>
+                                    </div>
+                                    <input type="text" class="form-control" placeholder="tape search here ...">
+                                </div>
+                            </div>
+                            <div class="row appCard">
+                                @for(discussion of listDiscussion; track $index){
+                                <app-card-message [discussion]="discussion"
+                                    (clickMessage)="onMessagereceived(discussion.destinataire)"
+                                    (clickMessageActif)="onMessagereceived(discussion.destinataire)"
+                                    (clickMessage)="toggleComponent()"
+                                    [lien_pdp]="discussion.lienPdp"></app-card-message>
+                                }
+                            </div>
+                        </div>
+                    </div>
+
+                </div>
+            </div>
+            }
+            <div class="col-lg-6 blocSendMessage">
+                @for(discussion of listDiscussion; track $index){
+                @if(discussion.destinataire == nomMessage){
+                <app-send-message class="sendMessage" [sendMessageData]="discussion"></app-send-message>
+                @if(isSmallScreen && isHide){
+                <app-send-message-responsive class="sendMessageResponsive hide" [hidden]="!isHide"
+                    [sendMessageData]="discussion" [lienPdp]="discussion.lienPdp"></app-send-message-responsive>
+                }
+                }
+                }
+            </div>
+
+        </div>
+    </div>
+</div>-->
+<app-side-bar></app-side-bar>
+<div class="content-wrapper d-flex justify-content-center align-items-center" style="min-height: 100vh;">
+    <div class="container-fluid mainMessage">
+        <div class="row d-flex flex-nowrap" style="padding: 0;">
+            @if(!isSmallScreen || !isHide){
+            <div class="col-sm-5 actifBloc">
+                <div class="container-fluid">
+                    <div class="row actif">
+                        @for (item of listDiscussion; track $index) {
+                        @if($index<=5){ <app-list-actif class="col-sm-2" [nom]="listDiscussion[$index].destinataire"
+                            [lien_pdp]="listDiscussion[$index].lienPdp"
+                            (clickMessageActif)="onMessagereceived(listDiscussion[$index].destinataire)">
+                            </app-list-actif>
+                            }
+                            }
+                    </div>
+                    <hr>
+                    <div class="row messageBlocI">
+                        <div class="container-fluid">
+                            <div class="row searchBloc">
+                                <div class="input-group mb-3">
+                                    <div class="input-group-prepend">
+                                        <span class="input-group-text"><fa-icon [icon]="search"></fa-icon></span>
+                                    </div>
+                                    <input type="text" class="form-control" placeholder="tape search here ...">
+                                </div>
+                            </div>
+                            <div class="row appCard">
+                                @for(discussion of listDiscussion; track $index){
+                                <app-card-message [discussion]="discussion"
+                                    (clickMessage)="onMessagereceived(discussion.destinataire)"
+                                    (clickMessageActif)="onMessagereceived(discussion.destinataire)"
+                                    (clickMessage)="toggleComponent()"
+                                    [lien_pdp]="discussion.lienPdp"></app-card-message>
+                                }
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            }
+
+            <!-- BLOC QUI PREND TOUT L'ESPACE RESTANT -->
+            <div class="blocSendMessage d-flex flex-grow-1 justify-content-center align-items-center w-50">
+                @for(discussion of listDiscussion; track $index){
+                @if(discussion.destinataire == nomMessage){
+                <app-send-message class="sendMessage w-100 h-100" [sendMessageData]="discussion"
+                    style="max-width: 100%; max-height: 100%;"></app-send-message>
+                @if(isSmallScreen && isHide){
+                <app-send-message-responsive class="sendMessageResponsive hide w-100 h-100" [hidden]="!isHide"
+                    [sendMessageData]="discussion" [lienPdp]="discussion.lienPdp"
+                    style="max-width: 100%; max-height: 100%;"></app-send-message-responsive>
+                }
+                }
+                }
+            </div>
+
+        </div>
+    </div>
+</div>

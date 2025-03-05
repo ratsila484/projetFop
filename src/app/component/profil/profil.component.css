@@ -1,0 +1,86 @@
+.marginLeft{
+    height: 99vh;
+}
+
+.ProfileMainBloc{
+    display: flex;
+}
+
+header{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: #3333338f;
+}
+
+.pdpProfile {
+    width: 200px; /* Largeur du conteneur */
+    height: 200px; /* Hauteur du conteneur */
+    border-radius: 50%; /* Rend le conteneur circulaire */
+    overflow: hidden; /* Assure que l'image reste dans le cercle */
+    box-shadow: 
+      3px 3px 6px rgba(0, 0, 0, 0.3), /* Ombre en bas à droite */
+      -3px 3px 6px rgba(0, 0, 0, 0.3); /* Ombre en bas à gauche */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 20px auto; /* Centrage horizontal */
+    transform: translateY(40px);
+  }
+  
+  .pdpProfile img {
+    width: 120%; /* Adapte l'image à la taille du conteneur */
+    height: 100%; /* Adapte l'image à la taille du conteneur */
+    object-fit: cover; /* Recadre l'image pour qu'elle remplisse le cercle */
+  }
+
+  .blocBody{
+    display: flex;
+    justify-content: center;
+  }
+
+  .body{
+    width: 70%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    border-radius: 10px;
+    box-shadow: 3px 3px 6px rgba(0, 0, 0, 0.3), /* Ombre en bas à droite */
+    -3px 3px 6px rgba(0, 0, 0, 0.3); /* Ombre en bas à gauche */
+    padding: 10px;
+  }
+
+  .ProfileDetail .row{
+    width: 500px;
+    margin-bottom: 10px;
+  }
+
+  @media screen and (max-width : 850px) {
+    .ProfileMainBloc{
+        width: 100%;
+        border: pink 1px solid;
+    }
+    .ProfileDetail .row{
+        width: auto;
+      }
+      .marginLeft{
+        width: 0;
+        height: 99vh;
+    }
+    .body{
+        width: 90%;
+    }
+  }
+
+  @media screen and (max-width: 600px) {
+    .marginLeft{
+        width: 0;
+        height: 99vh;
+        margin-left: 0;
+    }
+    
+  }
+
+  
+

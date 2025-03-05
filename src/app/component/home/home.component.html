@@ -1,0 +1,87 @@
+<app-side-bar></app-side-bar>
+
+<div class="content-wrapper">
+    <!-- Main Content -->
+    <div class="mainBloc">
+        <!-- Header section with a title and some text -->
+        <header class="page-header">
+            <h1>Bienvenue sur la page d'accueil</h1>
+            <p>Explorez nos formations et inscrivez-vous à celles qui vous intéressent !</p>
+        </header>
+
+        <!-- Features Section -->
+        <div class="features-section">
+            <div class="feature-item" data-aos="fade-up" data-aos-delay="100">
+                <h3>Messagerie Instantanée</h3>
+                <p>Discutez en temps réel avec vos collègues ou formateurs, comme avec Messenger. Vous pouvez échanger des messages privés ou en groupe pour rester connecté.</p>
+            </div>
+
+            <div class="feature-item" data-aos="fade-up" data-aos-delay="200">
+                <h3>Transfert de Fichiers</h3>
+                <p>Transférez des fichiers de manière sécurisée, comme un FTP. Vous pouvez envoyer et recevoir des fichiers de toutes tailles facilement, sans perdre de temps.</p>
+            </div>
+        </div>
+
+        <!-- Formation List -->
+        <div class="mainFormation row">
+            <!-- Formation 1 -->
+            <div class="card col-sm-4 ml-sm-2" data-aos="flip-left" data-aos-delay="300">
+                <div class="img">
+                    <img src="assets/formation1.jpg" alt="photo_du_formation">
+                </div>
+                <div class="label">
+                    <p>Formation 1</p>
+                </div>
+                <div class="detail">
+                    <p>Cette formation vous apprend les bases du développement web.</p>
+                </div>
+                <div class="inscription">
+                    <button mat-raised-button color="primary">
+                        S'inscrire
+                    </button>
+                </div>
+            </div>
+
+            <!-- Formation 2 -->
+            <div class="card col-sm-4 ml-sm-2" data-aos="flip-left" data-aos-delay="400">
+                <div class="img">
+                    <img src="assets/formation2.jpg" alt="photo_du_formation">
+                </div>
+                <div class="label">
+                    <p>Formation 2</p>
+                </div>
+                <div class="detail">
+                    <p>Apprenez à utiliser les outils modernes pour développer des applications.</p>
+                </div>
+                <div class="inscription">
+                    <button mat-raised-button color="primary">
+                        S'inscrire
+                    </button>
+                </div>
+            </div>
+
+            <!-- Formation 3 -->
+            <div class="card col-sm-4 ml-sm-2" data-aos="flip-left" data-aos-delay="500">
+                <div class="img">
+                    <img src="assets/formation3.jpg" alt="photo_du_formation">
+                </div>
+                <div class="label">
+                    <p>Formation 3</p>
+                </div>
+                <div class="detail">
+                    <p>Formation approfondie sur le développement mobile pour Android et iOS.</p>
+                </div>
+                <div class="inscription">
+                    <button mat-raised-button color="primary">
+                        S'inscrire
+                    </button>
+                </div>
+            </div>
+
+            <!-- Message when no formation is available -->
+            <div style="display: flex; justify-content: center; align-items: center;">
+                <h3>Pas de formation disponible ....</h3>
+            </div>
+        </div>
+    </div>
+</div>

@@ -1,0 +1,25 @@
+table{
+    margin: 10px;
+}
+
+
+tr{
+    border-top: 1px solid #3333339a;
+    border-bottom: 1px solid #3333339a;
+    height: 40px;
+    cursor: pointer;
+    transition: 0.3s all;
+}
+
+tbody tr:hover{
+    background-color: #b1afaf34;
+}
+
+tbody tr:active{
+    background-color: #7a7a7a77;
+}
+
+.icon{
+    margin-left: 5px;
+    margin-right: 5px;
+}

@@ -1,0 +1,99 @@
+/* Assurez-vous que l'ensemble de la page prend toute la hauteur */
+html, body {
+    height: 100%;
+    margin: 0;
+}
+
+/* Le contenu wrapper occupe toute la hauteur disponible */
+.content-wrapper {
+    display: flex;
+    flex-direction: column;
+    height: 100vh;
+    background-color: #f5faff; /* Fond léger bleu clair */
+    padding: 20px;
+    box-sizing: border-box;
+}
+
+/* Le bloc principal doit prendre toute la place restante */
+.mainBloc {
+    flex-grow: 1;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+}
+
+/* Bloc de formation avec flex-wrap pour l'adaptation responsive */
+.mainFormation {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+    gap: 20px;
+    flex-grow: 1;
+}
+
+/* Les cartes de formation */
+.card {
+    background-color: #ffffff;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    width: 100%;
+    max-width: 300px;
+    transition: transform 0.3s ease-in-out;
+    margin-bottom: 20px; /* Ajout d'un espacement sous chaque carte */
+}
+
+/* Image dans la carte */
+.card .img img {
+    width: 100%;
+    height: auto;
+    object-fit: cover;
+    border-bottom: 1px solid #ddd;
+}
+
+/* Label (titre de la formation) */
+.card .label {
+    padding: 15px;
+    font-size: 18px;
+    font-weight: bold;
+    color: #333;
+}
+
+/* Description de la formation */
+.card .detail {
+    padding: 0 15px 15px 15px;
+    font-size: 14px;
+    color: #777;
+    height: 70px;
+    overflow: hidden;
+}
+
+/* Section d'inscription */
+.card .inscription {
+    display: flex;
+    justify-content: center;
+    padding: 15px;
+}
+
+/* Bouton d'inscription */
+.card button {
+    background-color: #4e94ff;
+    color: white;
+    font-size: 14px;
+    border-radius: 20px;
+    padding: 8px 20px;
+    transition: background-color 0.3s ease;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.card button:hover {
+    background-color: #3971d4;
+}
+
+/* Message quand il n'y a pas de formations */
+h3 {
+    color: #777;
+    font-size: 20px;
+    text-align: center;
+    margin-top: 30px;
+    font-weight: 500;
+}

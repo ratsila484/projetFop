@@ -1,0 +1,59 @@
+<section>
+    <div class="container-fluid py-12 chat-container">
+
+        <div class="row d-flex ">
+            <div class="col-md-12 col-lg-12 col-xl-12">
+
+                <div class="card" id="chat2">
+                    <div class="card-header d-flex justify-content-between align-items-center p-3">
+                        <div class="left d-flex align-items-center">
+                            <div class="btnCollapse">
+                                <a class="ms-1 text-muted" (click)="returnButton()" style="cursor: pointer;"><fa-icon [icon]="backBtn"></fa-icon></a>
+                            </div>
+                            <div class="pdp">
+                                <img [src]="lienPdp" alt="pdp" srcset="">
+                            </div>
+                            <div class="destinataire">
+
+                                <h5 class="mb-0">{{sendMessageData.destinataire}}</h5>
+                                <h6>{{sendMessageData.date}}</h6>
+
+                            </div>
+                        </div>
+                        <div class="right">
+
+                            <a class="ms-1 text-muted" href="#!"><fa-icon [icon]="phone"></fa-icon></a>
+                            <a class="ms-1 text-muted" href="#!"><fa-icon [icon]="camera"></fa-icon></a>
+                            <a class="ms-1 text-muted" href="#!"><fa-icon [icon]="menu"></fa-icon></a>
+                        </div>
+                    </div>
+                    <div class="card-body">
+
+                        <div class="divider d-flex align-items-center mb-4">
+                            <p class="text-center mx-3 mb-0" style="color: #a2aab7;">
+                                {{currentDate.toLocaleDateString()}}</p>
+                        </div>
+
+                        <ng-container #container>
+
+                        </ng-container>
+
+                    </div>
+                    <div class="card-footer text-muted d-flex justify-content-start align-items-center p-3">
+                        <img [src]="lienPdp"
+                            alt="avatar 3" style="width: 40px; height: 40px; border-radius: 50%; border: 1px solid #333;"/>
+                        <input type="text" class="form-control form-control-lg" id="exampleFormControlInput1"
+                            placeholder="Type message" [(ngModel)]="nom">
+                        <a class="ms-1 text-muted" href="#!"><fa-icon [icon]="fichier"></fa-icon></a>
+                        <a class="ms-3 text-muted" href="#!"><fa-icon [icon]="smile"></fa-icon></a>
+                        <a class="ms-3"
+                            (click)="sendMessage(sendMessageData.destinataire,nom,currentDate.toLocaleString())"><fa-icon
+                                [icon]="send"></fa-icon></a>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+
+    </div>
+</section>

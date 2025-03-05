@@ -1,0 +1,208 @@
+.user{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    cursor: pointer;
+}
+
+
+.user .pdp{
+    border: blue 1px solid;
+    border-radius: 50%;
+    height: 80px;
+    width: 80px;
+}
+
+.userName{
+    text-align: center;
+}
+
+
+.actif{
+    display: flex;
+    align-items: center;
+    padding: 0;
+}
+
+@media screen and (max-width: 600px){
+    .mainMessage{ 
+        padding-left: 0;
+    }
+    .actif{
+        display: none;
+    }
+    .sendMessage{
+        display: none;
+    }
+    
+}
+
+
+@media screen and (max-height:700px) {
+    .messageBlocI{
+        height: 40vh;
+    }
+}
+/*
+@media screen and (max-height: 580px) {
+    .messageBlocI{
+        height: 55vh;
+    }
+}
+
+@media screen and (max-height:485px) {
+    .messageBlocI{
+        height: 45vh;
+    }
+}*/
+
+.input{
+    border-radius: 10px;
+}
+
+.searchBloc{
+    display: flex;
+}
+
+.blocMarginLeft{
+    width: 7%
+}
+.col-lg-6{
+    padding: 0;
+}
+.discuss{
+    display: flex;
+    border-bottom: 1px solid #3333336b;
+    box-shadow: 0px 2px 2px #33333348;
+    cursor: pointer;
+    transition: 0.5s ease;
+    align-items: center;
+    padding: 2px;
+    justify-content: space-between;
+}
+.discuss .left{
+    display: flex;
+    align-items: center;
+}
+.discuss .right{
+    width: 100px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.discuss:hover{
+    background-color: #1aa6ec3f;
+}
+.timeMessage{
+    font-size: 12px;
+    color: #3333337c;
+}
+
+.discussPdp{
+    border: 1px solid green ;
+    border-radius: 50%;
+    width: 80px;
+    height: 80px;
+    margin-right: 10px;
+}
+
+.discussClient{
+    display: flex;
+    flex-direction: column;
+}
+.discussClient p{
+
+    margin: 0;
+    padding: 0;
+}
+.discussClient p{
+    font-weight: bold;
+}
+.sendMessage{
+    box-shadow: -2px 2px 2px #33333348;
+    margin-left: 10px;
+    margin-top: 5px;
+    height: 98vh;
+}
+
+.hide{
+    display: none;
+}
+
+.headerSendMess{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    margin: 0;
+    padding: 2px;
+    align-items: center;
+    height: 80px;
+    background-color: #1AA7EC;
+}
+.destination{
+    display: flex;
+
+}
+.destination .pdp{
+    border: 1px solid blue;
+    height: 60px;
+    width: 60px;
+    border-radius: 50%;
+    margin-right: 5px;
+}
+.nameDestination{
+    margin: 0;
+    padding: 0;
+}
+.messageBloc{
+    border: 1px solid red;
+    position: fixed;
+}
+.nameDestination p{
+    border: solid red 1px;
+    margin: 0;
+}
+
+
+/* Quand l'écran est inférieur à 1000px */
+@media (max-width: 1000px) {
+    .sendMessage {
+        display: none; /* Cache la colonne sendMessage */
+    }
+    .actifBloc {
+        flex: 0 0 90%; /* Prend toute la largeur de l'écran */
+       
+    }
+    .sendMessageResponsive{
+        display: block;
+    }
+}
+
+
+
+
+
+.messageBlocI{
+    overflow-y: auto;
+    height: 800px;
+}
+
+.messageBlocI::-webkit-scrollbar{
+    width: 5px;
+    height: 10px;
+}
+
+.messageBlocI::-webkit-scrollbar-track{
+    background: #807f99;
+    border-radius: 5px;
+}
+
+.messageBlocI::-webkit-scrollbar-thumb{
+    background: #888;
+    border-radius: 5px;
+}
+.messageBlocI::-webkit-scrollbar-thumb:hover{
+    background: #555;
+}
+

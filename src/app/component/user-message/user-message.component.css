@@ -1,0 +1,4 @@
+.userMessage{
+    transition: 0.5s all;
+    animation: forwards 0.5s anime_show;
+}

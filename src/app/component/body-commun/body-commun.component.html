@@ -1,0 +1,32 @@
+<table>
+    <thead>
+        <tr>
+            <th>Nom fichier</th>
+            <th>Dernier modification</th>
+            <th>Date de création</th>
+            <th>Taille du fichier</th>
+        </tr>
+    </thead>
+    <tbody>
+        @for (item of files; track $index) {
+        <tr (click)="navigateOrView(item)" (click)="viewFile(item)">
+            <td width="30%">
+                @if( !item.isDirectory){
+                <span><fa-icon class="icon" [icon]="fileIcon"></fa-icon>{{item.name}}</span>
+                }@else {
+                <span><fa-icon class="icon" [icon]="folderIcon"></fa-icon>{{item.name}}</span>
+                }
+            </td>
+            <td width="30%">
+                <span>{{item.lastModified}}</span>
+            </td>
+            <td width="30%">
+                <span>{{item.createDate}}</span>
+            </td>
+            <td width="30%">
+                <span>{{item.size}}</span>
+            </td>
+        </tr>
+        }
+    </tbody>
+</table>

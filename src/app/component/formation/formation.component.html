@@ -1,0 +1,35 @@
+<app-side-bar></app-side-bar>
+<div class="content-wrapper">
+    <div class="mainBloc">
+        <div class="mainFormation row">
+            @if(formationListes){
+                @for(formationListe of formationListes; track formationListe){
+                    <div class="card col-sm-4 ml-sm-2">
+                        <div class="img">
+                            <img [src]="formationListe.cheminPhoto" alt="photo_du_formation">
+                        </div>
+                        <div class="label">
+                            <p>{{formationListe.nom}}</p>
+                        </div>
+                        <div class="detail">
+                            <p>{{formationListe.description}}</p>
+                        </div>
+                        <div class="inscription">
+                            <button mat-raised-button color="primary" (click)="inscriptionFormation(formationListe.nom)">
+                                @if(!formationListe.statut){
+                                    S'inscrire
+                                } @else {
+                                    Inscrit(e)
+                                }
+                            </button>
+                        </div>
+                    </div>
+                }
+            } @else {
+                <div style="display: flex; justify-content: center; align-items: center;">
+                    <h3>Pas de formation disponible ....</h3>
+                </div>
+            }
+        </div>
+    </div>
+</div>

@@ -1,0 +1,20 @@
+<div class="discuss" (click)="onClick()" (click)="onHide()">
+    <div class="left">
+        <div class="discussPdp">
+            <img [src]="lien_pdp" alt="pdp">
+        </div>
+        <div class="disussClient">
+            <div class="discussClient">
+                <p>{{discussion.destinataire}}</p>
+                <span [className]="isView">{{discussion.message[0].mess}}</span><span class="timeMessage">{{discussion.date}}</span>
+            </div>
+        </div>
+    </div>
+    <div class="middle">
+
+    </div>
+    <div class="right">
+        <p><fa-icon [icon]="actifPoint" style="color: rgb(47, 235, 47);"></fa-icon> actif
+        </p>
+    </div> 
+</div>
