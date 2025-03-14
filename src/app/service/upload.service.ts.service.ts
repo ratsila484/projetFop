@@ -20,7 +20,7 @@ export class UploadServiceTsService {
   }
 
   getFiles(): Observable<any> {
-    return this.http.get<any>('http://localhost/ftp/liste_file.php');
+    return this.http.get<any>('http://192.168.2.9/ftp/liste_file.php');
   }
 
   // Fonction pour télécharger le fichier
