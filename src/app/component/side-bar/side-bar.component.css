@@ -68,20 +68,4 @@
     text-align: center;
 }
 
-/* Sidebar responsive */
-@media (max-width: 768px) {
-    .main-sidebar {
-        width: 100%;
-        position: fixed;
-        left: 0;
-        top: 0;
-    }
 
-    .user-panel .info {
-        display: none;
-    }
-
-    .sidebar {
-        padding: 15px;
-    }
-}
