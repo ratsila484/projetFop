@@ -212,7 +212,7 @@ export class Commun2Component implements OnInit {
     formData.append("file", this.selectedFile);
     formData.append("uploader", "NomUtilisateur");
     //formData.append("statut", this.statut);
-    this.http.post("http://localhost/ftp/upload.php", formData).subscribe((response: any) => {
+    this.http.post("http://192.168.2.9/ftp/upload.php", formData).subscribe((response: any) => {
       if (response.success) {
         alert("Fichier uploadé !");
         this.loadFiles(); // Recharge la liste après l'upload
@@ -240,7 +240,7 @@ export class Commun2Component implements OnInit {
     mydialog.afterClosed().subscribe(result => {
       //console.log(result);
       if (result) {
-        this.http.post('http://localhost/ftp/delete.php', formData).subscribe((response: any) => {
+        this.http.post('http://192.168.2.9/ftp/delete.php', formData).subscribe((response: any) => {
           if (response.success) {
             //alert("Fihcier supprimmer avec success");
             this.loadFiles();
@@ -273,7 +273,7 @@ export class Commun2Component implements OnInit {
       mydialog.afterClosed().subscribe(result => {
         //console.log(result);
         if (result) {
-          this.http.post('http://localhost/ftp/delete.php', formData).subscribe((response: any) => {
+          this.http.post('http://192.168.2.9/ftp/delete.php', formData).subscribe((response: any) => {
             if (response.success) {
               //alert("Fihcier supprimmer avec success");
               this.loadFiles();
@@ -316,7 +316,7 @@ export class Commun2Component implements OnInit {
     }*/
     this.selectedFilees.forEach(element => {
       const link = document.createElement('a');
-      link.href = `http://localhost/ftp/download.php?filename=${element.chemin}`;
+      link.href = `http://192.168.2.8/ftp/download.php?filename=${element.chemin}`;
       link.download = element.chemin;
       //ouvre un nlle onglt pour chaque fichier
       window.open(link.href, '_blank');
